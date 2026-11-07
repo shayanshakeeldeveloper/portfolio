@@ -473,6 +473,134 @@
         color: var(--green);
         transition: all 0.9s ease-in-out;
     }
+
+    /* TOOLKIT SECTION KI STYLING */
+
+    .toolkit {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 80px;
+        gap: 60px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .toolkit .text {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toolkit .text span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .toolkit .text h2 {
+        font-size: 56px;
+    }
+
+    .toolkit .cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .toolkit .cards .card {
+        padding: 20px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        flex-direction: column;
+        width: 48%;
+        border-radius: 20px;
+        border: 1px solid var(--white);
+        gap: 10px;
+    }
+
+    .toolkit .cards .card h3 {
+        font-size: 40px;
+    }
+
+    .toolkit .cards .card span {
+        font-size: 18px;
+    }
+
+    /* PROCESS SECTION KI STYLING */
+
+    .process {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        padding: 80px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 60px;
+    }
+
+    .process .text {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .process .text span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .process .text h2 {
+        font-size: 56px;
+    }
+
+    .process .cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .process .cards .card {
+        width: 49%;
+        height: auto;
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .process .cards .card .top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+    }
+
+    .process .cards .card .top span , i {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .process .cards .card h3 {
+        font-size: 40px;
+    }
 </style>
 
 <body>
@@ -577,7 +705,8 @@
                 </div>
                 <h3>Website Development</h3>
                 <p>
-                    Building modern, responsive and visually appealing websites tailored to your brand, business goals and audience.
+                    Building modern, responsive and visually appealing websites tailored to your brand, business goals
+                    and audience.
                 </p>
             </div>
             <div class="line"></div>
@@ -600,7 +729,8 @@
                 </div>
                 <h3>Website Redesign</h3>
                 <p>
-                    Transforming outdated websites into modern digital experiences with improved layouts, responsive designs and better usability.
+                    Transforming outdated websites into modern digital experiences with improved layouts, responsive
+                    designs and better usability.
                 </p>
             </div>
             <div class="line"></div>
@@ -611,7 +741,8 @@
                 </div>
                 <h3>Interactive Web Experiences</h3>
                 <p>
-                    Creating engaging websites with smooth animations, creative interactions and immersive visual elements that leave a lasting impression.
+                    Creating engaging websites with smooth animations, creative interactions and immersive visual
+                    elements that leave a lasting impression.
                 </p>
 
             </div>
@@ -624,7 +755,8 @@
             <span>03 / SELECTED WORK</span>
             <h2>A collection of digital experiences.</h2>
             <p>
-                A selection of projects where creativity meets functionality. Each project represents an opportunity to explore ideas, solve problems and build something meaningful.
+                A selection of projects where creativity meets functionality. Each project represents an opportunity to
+                explore ideas, solve problems and build something meaningful.
             </p>
         </div>
         <div class="projects">
@@ -668,6 +800,93 @@
     </div>
 
     <!-- TOOLKIT SECTION -->
+    <div class="toolkit">
+        <div class="text">
+            <span>04 / MY TOOLKIT</span>
+            <h2>The tools behind my work.</h2>
+            <p>
+                A growing collection of technologies and tools I use to turn ideas into functional digital experiences.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>01 - FRONTEND</h3>
+                <span>
+                    <i class="fa-brands fa-html5"></i> HTML
+                </span>
+                <span>
+                    <i class="fa-brands fa-css3-alt"></i> CSS
+                </span>
+                <span>
+                    <i class="fa-brands fa-square-js"></i> JavaScript
+                </span>
+            </div>
+            <div class="card">
+                <h3>02 - TOOLS</h3>
+                <span>
+                    <i class="fa-brands fa-git-alt"></i> GIT & GITHUB
+                </span>
+                <span>
+                    <i class="fa-solid fa-code"></i> VS CODE
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROCESS SECTION -->
+    <div class="process">
+        <div class="text">
+            <span>05 / HOW I WORK</span>
+            <h2>
+                From first idea to final launch.
+            </h2>
+            <p>
+                A simple and thoughtful process that turns ideas into purposeful digital experiences.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="top">
+                    <span>01</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Discovery & Planning</h3>
+                <p>
+                    Understanding your goals, audience and project requirements before getting started.
+                </p>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <span>02</span>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <h3>Structure & Design</h3>
+                <p>
+                    Planning the layout, organizing content and shaping the visual direction of the website.
+                </p>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <span>03</span>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Development & Build</h3>
+                <p>
+                    Turning the approved design into a responsive and functional website using clean code.
+                </p>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <span>04</span>
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Testing & Launch</h3>
+                <p>
+                    Checking responsiveness, functionality and details before preparing the website for launch.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
