@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayan Shakeel - Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    :root {
+        --green: #a5ec48;
+        --black: #111111;
+        --white: #f0f0f0;
+    }
+
+    /* HEADER KI STYLING */
+
+    .header {
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* NAVBAR KI STYLING */
+
+    .navbar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        justify-content: space-between;
+
+    }
+
+    .navbar>.logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .navbar>.logo>img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .navbar>.nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar>.nav-links>a {
+        background-color: var(--white);
+        border-radius: 20px;
+        width: 90px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        color: var(--black);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .navbar>.nav-links>a:hover {
+        background-color: var(--green);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .navbar>.nav-links>.active {
+        background-color: var(--green);
+    }
+
+    .navbar>a>button {
+        color: var(--black);
+        width: 110px;
+        height: 36px;
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        background-color: var(--white);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .navbar>a>button:hover {
+        background-color: var(--black);
+        color: var(--white);
+        transition: all 0.9s ease-in-out;
+    }
+
+    /* HERO SECTION KI STYLING */
+
+    .hero {
+        width: 95%;
+        height: calc(94vh - 60px);
+        margin: auto;
+        margin-top: 20px;
+        background-image: url("assets/hero-image.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--white);
+    }
+
+    .hero .left-text {
+        margin-left: 80px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero .left-text span {
+        color: var(--green);
+        font-size: 20px;
+    }
+
+    .hero .left-text h1 {
+        font-size: 80px;
+    }
+
+    .hero .left-text .button {
+        display: flex;
+        gap: 16px;
+    }
+
+    .hero .left-text .button .project-btn button {
+        width: 110px;
+        height: 36px;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--green);
+        color: var(--black);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .hero .left-text .button .project-btn button:hover {
+        background-color: transparent;
+        border: 1px solid var(--green);
+        color: var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .hero .left-text .button .contact-btn button {
+        width: 110px;
+        height: 36px;
+        border: none;
+        border-radius: 20px;
+        background-color: transparent;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .hero .left-text .button .contact-btn button:hover {
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        color: var(--black);
+        transition: all 0.9s ease-in-out;
+    }
+
+
+    /* ABOUT SECTION KI STYLING */
+
+    .about {
+        width: 100%;
+        height: 100vh;
+        padding: 80px;
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .about span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .about .main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .about .main .left {
+        height: 80vh;
+        width: auto;
+    }
+
+    .about .main .left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .about .main .left img:hover {
+        transform: scale(1.04);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .about .main .right {
+        width: 86vh;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 100px;
+    }
+
+    .about .main .right h2 {
+        font-size: 56px;
+    }
+
+    .about .main .right a button {
+        width: 110px;
+        height: 36px;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--green);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .about .main .right a button:hover {
+        background-color: transparent;
+        color: var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    /* SERVICES SECTION KI STYLING */
+
+    .services {
+        width: 100%;
+        height: 130vh;
+        padding: 80px;
+        background-color: var(--black);
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .services .text {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .services .text span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    .services .text h2 {
+        font-size: 56px;
+    }
+
+    .services .cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .services .cards .line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--white);
+    }
+
+    .services .cards .card {
+        width: 100%;
+        height: auto;
+        color: var(--white);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .services .cards .card .number-and-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services .cards .card .number-and-icon span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .services .cards .card .number-and-icon i {
+        font-size: 24px;
+    }
+
+    .services .cards .card h3 {
+        font-size: 40px;
+    }
+
+    /* SELECTED WORK SECTION KI STYLING */
+
+    .selected-work {
+        width: 100%;
+        height: 100vh;
+        padding: 80px;
+        background-color: var(--white);
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .selected-work .text {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .selected-work .text span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .selected-work .text h2 {
+        font-size: 56px;
+    }
+
+    .selected-work .projects {
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 20px;
+    }
+
+    .selected-work .projects .project {
+        width: 50%;
+        height: auto;
+        color: var(--black);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .selected-work .projects .project .box {
+        width: 100%;
+        height: 200px;
+        background-color: var(--green);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s ease-in-out;
+        border: 1px solid var(--green);
+    }
+
+    .selected-work .projects .project .box:hover a button {
+        display: block;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .selected-work .projects .project .box a {
+        text-decoration: none;
+    }
+
+    .selected-work .projects .project .box a button {
+        width: 110px;
+        height: 36px;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--black);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--black);
+        transition: all 0.9s ease-in-out;
+        display: none;
+    }
+
+    .selected-work .projects .project .box a button:hover {
+        background-color: transparent;
+        color: var(--black);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .selected-work .projects .project h3 {
+        font-size: 40px;
+    }
+
+    .selected-work .projects .project span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .selected-work .footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .selected-work .footer h3 {
+        font-size: 36px;
+    }
+
+    .selected-work .footer a button {
+        width: 180px;
+        height: 46px;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--green);
+        color: var(--black);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .selected-work .footer a button:hover {
+        background-color: transparent;
+        color: var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+</style>
+
+<body>
+
+
+    <div class="header">
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="logo"><img src="assets/logo.jpg" alt=""></div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/portfolio.html">Portfolio</a>
+            </div>
+            <a href="pages/contact.html">
+                <button>
+                    <i class="fa-regular fa-comment-dots"></i>
+                    Let's Talk
+                </button>
+            </a>
+        </div>
+
+
+        <!-- HERO SECTION -->
+        <div class="hero">
+
+            <div class="left-text">
+                <span>Hey I'm Shayan</span>
+                <h1>
+                    Web Developer
+                </h1>
+
+                <div class="button">
+                    <a class="project-btn" href="pages/portfolio.html">
+                        <button>
+                            Projects
+                        </button>
+                    </a>
+
+                    <a class="contact-btn" href="pages/contact.html">
+                        <button>
+                            Contact Me
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="about">
+        <span>01 / ABOUT ME</span>
+        <div class="main">
+            <div class="left">
+                <img src="assets/about.png" alt="">
+            </div>
+            <div class="right">
+                <h2>
+                    Shayan Shakeel
+                </h2>
+                <p>
+                    I'm Shayan Shakeel, a passionate web developer who loves turning creative ideas into meaningful
+                    digital experiences. I focus on building modern, visually engaging, and user-friendly websites
+                    that combine creativity with functionality.
+                </p>
+                <p>
+                    My journey in web development is driven by curiosity, continuous learning, and a passion for
+                    technology. I enjoy exploring new ideas, experimenting with interactive elements, and finding
+                    creative ways to bring designs to life through code.
+                </p>
+                <p>
+                    I believe a great website is more than just its appearance — it's about creating an experience
+                    that feels smooth, intuitive, and memorable. My goal is to keep improving my skills and build
+                    digital experiences that make a lasting impression.
+                </p>
+                <a href="pages/about.html">
+                    <button>
+                        Read More
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <div class="services">
+        <div class="text">
+            <span>02 / WHAT I DO</span>
+            <h2>Turning Ideas Into Digital Experiences.</h2>
+            <p>
+                I combine creativity and technology to build modern digital experiences that help businesses establish
+                their
+                online presence and connect with their audience.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>01</span>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Website Development</h3>
+                <p>
+                    Building modern, responsive and visually appealing websites tailored to your brand, business goals and audience.
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>02</span>
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>
+                    Transforming creative designs into interactive and functional interfaces with clean code and
+                    seamless user experiences.
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>03</span>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <h3>Website Redesign</h3>
+                <p>
+                    Transforming outdated websites into modern digital experiences with improved layouts, responsive designs and better usability.
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>04</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3>Interactive Web Experiences</h3>
+                <p>
+                    Creating engaging websites with smooth animations, creative interactions and immersive visual elements that leave a lasting impression.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SELECTED WORK SECTION -->
+    <div class="selected-work">
+        <div class="text">
+            <span>03 / SELECTED WORK</span>
+            <h2>A collection of digital experiences.</h2>
+            <p>
+                A selection of projects where creativity meets functionality. Each project represents an opportunity to explore ideas, solve problems and build something meaningful.
+            </p>
+        </div>
+        <div class="projects">
+            <div class="project">
+                <div class="box">
+                    <a href="#">
+                        <button>
+                            Preview ↗
+                        </button>
+                    </a>
+                </div>
+                <h3>Project Title</h3>
+                <p>
+                    A brief description of the project, highlighting its purpose, features and impact.
+                </p>
+                <span>Website Development</span>
+            </div>
+            <div class="project">
+                <div class="box">
+                    <a href="#">
+                        <button>
+                            Preview ↗
+                        </button>
+                    </a>
+                </div>
+                <h3>Project Title</h3>
+                <p>
+                    A brief description of the project, highlighting its purpose, features and impact.
+                </p>
+                <span>Website Development</span>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>EXPLORE MORE PROJECTS</h3>
+            <a href="pages/portfolio.html">
+                <button>
+                    View All Projects ↗
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- TOOLKIT SECTION -->
+</body>
+
+</html>
