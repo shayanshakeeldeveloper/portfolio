@@ -346,7 +346,7 @@
 
     .selected-work {
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
         padding: 80px;
         background-color: var(--white);
         color: var(--black);
@@ -394,7 +394,7 @@
 
     .selected-work .projects .project .box {
         width: 100%;
-        height: 200px;
+        height: 300px;
         background-color: var(--green);
         border-radius: 20px;
         display: flex;
@@ -485,8 +485,8 @@
         align-items: baseline;
         padding: 80px;
         gap: 60px;
-        background-color: var(--black);
-        color: var(--white);
+        background-color: var(--green);
+        color: var(--black);
     }
 
     .toolkit .text {
@@ -521,7 +521,7 @@
         flex-direction: column;
         width: 48%;
         border-radius: 20px;
-        border: 1px solid var(--white);
+        border: 1px solid var(--black);
         gap: 10px;
     }
 
@@ -593,13 +593,164 @@
 
     }
 
-    .process .cards .card .top span , i {
+    .process .cards .card .top span,
+    i {
         font-size: 18px;
         font-weight: 700;
     }
 
     .process .cards .card h3 {
         font-size: 40px;
+    }
+
+    /* CONTACT SECTION KI STYLING */
+
+    .contact {
+        width: 92%;
+        height: 60vh;
+        margin: auto;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+        border-radius: 60px;
+        padding: 80px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .contact .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact .text span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .contact .text h2 {
+        font-size: 56px;
+    }
+
+    .contact .text h3 {
+        font-size: 48px;
+        color: var(--green);
+    }
+
+    .contact .text a button {
+        width: 180px;
+        height: 46px;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--green);
+        color: var(--black);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .contact .text a button:hover {
+        background-color: transparent;
+        color: var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .contact .links {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contact .links span {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .contact .links .social-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact .links .social-links a  {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .contact .links .social-links a i {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    /* FOOTER SECTION KI STYLING */
+
+    .footer-bottom {
+        width: 100%;
+        height: 60vh;
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 50px;
+        background-color: var(--green);
+        color: var(--black);
+    }
+
+    .footer-bottom .top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-bottom .top h2 {
+        font-size: 56px;
+    }
+
+    .footer-bottom .center {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-bottom .center .left, .right {
+        width: 49%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .footer-bottom .center .left a , .right a {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .footer-bottom .center .left h4 , .right h4 {
+        font-size: 32px;
+    }
+
+    .footer-bottom .bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-bottom .bottom span {
+        font-size: 20px;
+        font-weight: 700;
     }
 </style>
 
@@ -628,7 +779,7 @@
         <div class="hero">
 
             <div class="left-text">
-                <span>Hey I'm Shayan</span>
+                <span>Hey I'm Shayan Shakeel</span>
                 <h1>
                     Web Developer
                 </h1>
@@ -885,6 +1036,66 @@
                     Checking responsiveness, functionality and details before preparing the website for launch.
                 </p>
             </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="contact">
+        <div class="text">
+            <span>06 / LET'S CONNECT</span>
+            <h2>Have an idea?</h2>
+            <h3>Let's build something great together.</h3>
+            <p>
+                Have a project in mind or just want to say hello? I'd love to hear from you. Let's discuss how we can
+                bring your ideas to life.
+            </p>
+            <a href="pages/contact.html">
+                <button>
+                    Let's Work Together ↗
+                </button>
+            </a>
+        </div>
+        <div class="links">
+            <span>shayanshakeel346@gmail.com</span>
+            <div class="social-links">
+                <a href="https://www.instagram.com/shayanshakeeldeveloper/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/shayanshakeeldeveloper/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61576979789533" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div class="footer-bottom">
+        <div class="top">
+            <h2>Shayan Shakeel</h2>
+            <p>
+                Building modern digital experiences with creativity and code.
+            </p>
+        </div>
+        <div class="center">
+            <div class="left">
+                <h4>NAVIGATION</h4>
+                <a href="index.html">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/portfolio.html">Portfolio</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+            <div class="right">
+                <h4>SOCIAL LINKS</h4>
+                <a href="https://github.com/shayanshakeeldeveloper/" target="_blank">GitHub ↗</a>
+                <a href="https://www.facebook.com/profile.php?id=61576979789533" target="_blank">Facebook ↗</a>
+                <a href="https://www.instagram.com/shayanshakeeldeveloper/" target="_blank">Instagram ↗</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <span>© 2026 SHAYAN SHAKEEL. ALL RIGHTS RESERVED.</span>
         </div>
     </div>
 </body>
