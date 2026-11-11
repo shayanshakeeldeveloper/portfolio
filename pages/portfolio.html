@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayan Shakeel - About Me</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="shortcut icon" href="../assets/logo.jpg" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :root {
+        --green: #a5ec48;
+        --black: #111111;
+        --white: #f0f0f0;
+    }
+
+    /* HEADER KI STYLING */
+
+    .header {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    /* NAVBAR KI STYLING */
+
+    .navbar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        justify-content: space-between;
+
+    }
+
+    .navbar>.logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .navbar>.logo>img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .navbar>.nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar>.nav-links>a {
+        background-color: var(--white);
+        border-radius: 20px;
+        width: 90px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        color: var(--black);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .navbar>.nav-links>a:hover {
+        background-color: var(--green);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .navbar>.nav-links>.active {
+        background-color: var(--green);
+    }
+
+    .navbar>a>button {
+        color: var(--black);
+        width: 110px;
+        height: 36px;
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        background-color: var(--white);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .navbar>a>button:hover {
+        background-color: var(--black);
+        color: var(--white);
+        transition: all 0.9s ease-in-out;
+    }
+
+    /* HERO SECTION KI STYLING */
+
+    .hero {
+        width: 100%;
+        height: auto;
+        padding-left: 80px;
+        padding-right: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .hero .top span {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--green);
+    }
+
+    .hero .second-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .second-top h2 {
+        font-size: 80px;
+    }
+
+    .hero .second-top h3 {
+        font-size: 86px;
+        color: var(--green);
+        margin-top: -20px;
+    }
+
+    .hero .line-with-span {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .hero .line-with-span .line {
+        width: 100px;
+        height: 2px;
+        background-color: var(--black);
+    }
+
+    .hero .line-with-span span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .hero a button {
+        width: 180px;
+        height: 46px;
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        border-radius: 30px;
+        color: var(--black);
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.9s ease-in-out;
+    }
+
+    .hero a button:hover {
+        background-color: transparent;
+        color: var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .hero .cards {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero .cards .line {
+        width: 2px;
+        height: 80px;
+        background-color: var(--black);
+    }
+
+    .hero .cards .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .cards .card h4 {
+        font-size: 48px;
+    }
+
+    .hero .cards .card span {
+        font-size: 18px;
+        margin-top: -12px;
+    }
+
+    .hero .line {
+        width: 100%;
+        height: 2px;
+        background-color: var(--black);
+        margin-top: -10px;
+    }
+
+    /* PROJECT INDEX SECTION KI STYLING */
+
+    .project-index {
+        width: 100%;
+        height: auto;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 40px;
+        background-color: var(--green);
+        color: var(--white);
+    }
+
+    .project-index .top span {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--black);
+    }
+
+    .project-index .second-top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .project-index .second-top .left {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .project-index .second-top .left h2 {
+        font-size: 60px;
+        color: var(--black);
+    }
+
+    .project-index .second-top .left h3 {
+        font-size: 56px;
+        margin-top: -20px;
+        color: var(--black);
+    }
+
+    .project-index .second-top .right h2 {
+        font-size: 60px;
+        font-weight: 900;
+        color: var(--black);
+    }
+
+    .project-index .browse-projects {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .project-index .browse-projects h5 {
+        font-size: 30px;
+    }
+
+    .project-index .browse-projects .cards {
+        width: 100%;
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project-index .browse-projects .cards .card {
+        border: 1px solid var(--black);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
+        padding: 40px;
+    }
+
+    .project-index .browse-projects .cards .card .top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 320px;
+        color: var(--black);
+    }
+
+    .project-index .browse-projects .cards .card {
+        font-size: 46px;
+        color: var(--black);
+    }
+
+    .project-index .browse-projects .cards .active {
+        color: var(--green);
+        background-color: var(--black);
+    }
+
+    .project-index .browse-projects .cards .active .top span {
+        color: var(--green);
+    }
+
+    .project-index .filter-by-industry {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+        justify-content: center;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .project-index .filter-by-industry h5 {
+        font-size: 30px;
+    }
+
+    .project-index .filter-by-industry .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .project-index .filter-by-industry .cards .card {
+        border: 1px solid var(--white);
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    .project-index .filter-by-project-type {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .project-index .filter-by-project-type h5 {
+        font-size: 30px;
+    }
+
+    .project-index .filter-by-project-type .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .project-index .filter-by-project-type .cards .card {
+        border: 1px solid var(--white);
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    .project-index .filter-by-style {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .project-index .filter-by-style h5 {
+        font-size: 30px;
+    }
+
+    .project-index .filter-by-style .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-index .filter-by-style .cards .card {
+        padding: 20px;
+        width: calc(100vw - 160px);
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        border: 1px solid var(--white);
+        border-radius: 20px;
+    }
+
+    .project-index .technology {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-index .technology h5 {
+        font-size: 30px;
+    }
+
+    .project-index .technology .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .project-index .technology .cards .card {
+        border: 1px solid var(--white);
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    .project-index .sort-projects {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-index .sort-projects h5 {
+        font-size: 30px;
+    }
+
+    .project-index .sort-projects .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .project-index .sort-projects .cards .card {
+        border: 1px solid var(--white);
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    /* FEATURED SECTION KI STYLING */
+
+    .featured {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 80px;
+        gap: 40px;
+    }
+
+    .featured .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .featured .box {
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        background-color: var(--black);
+    }
+
+    .featured .detail {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .featured .detail .left h3 {
+        font-size: 50px;
+    }
+
+    .featured .detail .right h5 {
+        font-size: 36px;
+    }
+
+    .featured .second-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .featured .second-detail h4 {
+        font-size: 44px;
+    }
+
+    .featured .second-detail .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .featured .second-detail .cards .card {
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+
+    /* PROJECT ARCHIVE SECTION KI STYLING */
+
+    .project-archive {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 40px;
+        padding: 80px;
+    }
+
+    .project-archive .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .project-archive .second-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .project-archive .second-top h2 {
+        font-size: 60px;
+    }
+
+    .project-archive .second-top h3 {
+        font-size: 56px;
+        margin-top: -24px;
+    }
+
+    .project-archive .cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-archive .cards h5 {
+        font-size: 30px;
+    }
+
+    .project-archive .cards .card {
+        width: 100%;
+        height: auto;
+        background-color: var(--black);
+        border-radius: 20px;
+        color: var(--white);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-archive .cards .card .box {
+        width: 100%;
+        height: 400px;
+        background-color: var(--white);
+        border-radius: 20px;
+    }
+
+    .project-archive .cards .card .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project-archive .cards .card .detail .left {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .project-archive .cards .card .detail .left h3 {
+        font-size: 50px;
+    }
+
+    .project-archive .cards .card .detail .left span {
+        font-size: 18px;
+        font-weight: 700;
+
+    }
+
+    .project-archive .cards .card .detail .right {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--green);
+        color: var(--black);
+        border: 1px solid var(--green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.9s ease-in-out;
+    }
+
+    .project-archive .cards .card .detail .right i {
+        transform: rotate(-45deg);
+        font-size: 20px;
+    }
+
+    .project-archive .cards .card .detail .right:hover {
+        background-color: transparent;
+        color: var(--green);
+        transition: all 0.9s ease-in-out;
+    }
+
+    /* CREATIVE APPROCH SECTION */
+
+    .creative-approch {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 40px;
+        padding: 40px;
+    }
+
+
+    .creative-approch .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .creative-approch .cards {
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .creative-approch .cards .left-card {
+        width: 45%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: baseline;
+        align-items: baseline;
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        padding: 20px;
+
+    }
+
+    .creative-approch .cards .left-card span {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .creative-approch .cards .left-card h2 {
+        font-size: 56px;
+    }
+
+    .creative-approch .cards .right-card {
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: baseline;
+        align-items: baseline;
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .creative-approch .cards .right-card .card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .creative-approch .cards .right-card .card span {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--green);
+    }
+
+    .creative-approch .cards .right-card .card h3 {
+        font-size: 48px;
+    }
+
+    .creative-approch .cards .right-card .line {
+        width: 100%;
+        margin: auto;
+        height: 2px;
+        background-color: var(--black);
+    }
+
+    /* CONTACT SECTION KI STYLING */
+
+    .contact {
+        width: 92%;
+        height: 60vh;
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+        border-radius: 60px;
+        padding: 80px;
+        background-color: var(--green);
+        color: var(--white);
+    }
+
+    .contact .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact .text span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .contact .text h2 {
+        font-size: 56px;
+    }
+
+    .contact .text h3 {
+        font-size: 48px;
+        color: var(--black);
+    }
+
+    .contact .text a button {
+        width: 180px;
+        height: 46px;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--black);
+        color: var(--green);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--black);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .contact .text a button:hover {
+        background-color: transparent;
+        color: var(--black);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .contact .links {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contact .links span {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--black);
+    }
+
+    .contact .links .social-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact .links .social-links a {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .contact .links .social-links a i {
+        font-size: 20px;
+        font-weight: 800;
+    }
+</style>
+
+<body>
+    <!-- HEADER SECTION -->
+    <div class="header">
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="logo"><img src="../assets/logo.jpg" alt=""></div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+            </div>
+            <a href="contact.html">
+                <button>
+                    <i class="fa-regular fa-comment-dots"></i>
+                    Let's Talk
+                </button>
+            </a>
+        </div>
+
+        <!-- HERO SECTION -->
+
+        <div class="hero">
+            <div class="top">
+                <span>01 / MY WORK</span>
+            </div>
+            <div class="second-top">
+                <h2>Selected</h2>
+                <h3>Work</h3>
+            </div>
+            <div class="line-with-span">
+                <div class="line"></div>
+                <span>
+                    Ideas transformed into digital experiences.
+                </span>
+            </div>
+            <p>
+                A collection of concepts, experiments and <br>
+                innovative solutions crafted with creativity <br>
+                thoutful design and attention to detail.
+            </p>
+            <a href="#project-archive">
+                <button>
+                    Explore Projects <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </a>
+            <div class="cards">
+                <div class="card">
+                    <h4>200+</h4>
+                    <span>PROJECTS</span>
+                </div>
+                <div class="line"></div>
+                <div class="card">
+                    <h4>2+</h4>
+                    <span>MONTHS EXP.</span>
+                </div>
+                <div class="line"></div>
+                <div class="card">
+                    <h4>100%</h4>
+                    <span>DEDICATION</span>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <!-- PROJECT INDEX SECTION -->
+
+    <div class="project-index">
+        <div class="top">
+            <span>02 / PROJECT INDEX</span>
+        </div>
+        <div class="second-top">
+            <div class="left">
+                <h2>Find the work</h2>
+                <h3>that interests you</h3>
+                <p>
+                    A closer look at ideas, experiments and digital experiences.
+                </p>
+            </div>
+            <div class="right">
+                <h2>200+</h2>
+            </div>
+        </div>
+        <div class="browse-projects">
+            <h5>01 — BROWSE PROJECTS</h5>
+            <div class="cards">
+                <div class="card active">
+                    <div class="top">
+                        <span>01</span>
+                        <span>200</span>
+                    </div>
+                    <h3>All Projects</h3>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <span>02</span>
+                        <span>80</span>
+                    </div>
+                    <h3>Websites</h3>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <span>03</span>
+                        <span>40</span>
+                    </div>
+                    <h3>E-coommerce</h3>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <span>04</span>
+                        <span>30</span>
+                    </div>
+                    <h3>Portfolios</h3>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <span>04</span>
+                        <span>30</span>
+                    </div>
+                    <h3>Web Apps</h3>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <span>06</span>
+                        <span>20</span>
+                    </div>
+                    <h3>Experiments</h3>
+                </div>
+            </div>
+        </div>
+        <div class="filter-by-industry">
+            <h5>02 — FILTER BY INDUSTRY</h5>
+            <div class="cards">
+                <div class="card">Fashion</div>
+                <div class="card">Automotive</div>
+                <div class="card">Technology</div>
+                <div class="card">Education</div>
+                <div class="card">Architecture</div>
+                <div class="card">Photography</div>
+                <div class="card">Food & Beverage</div>
+                <div class="card">Lifestyle</div>
+                <div class="card">Creative Studio</div>
+                <div class="card">Other</div>
+            </div>
+        </div>
+        <div class="filter-by-project-type">
+            <h5>03 — FILTER BY PROJECT TYPE</h5>
+            <div class="cards">
+                <div class="card">Landing Page</div>
+                <div class="card">Business Website</div>
+                <div class="card">Online Store</div>
+                <div class="card">Portfolio Website</div>
+                <div class="card">Dashboard</div>
+                <div class="card">Booking System</div>
+                <div class="card">Web Application</div>
+                <div class="card">Interactive Website</div>
+                <div class="card">3D Website</div>
+                <div class="card">Redesign</div>
+            </div>
+        </div>
+        <div class="filter-by-style">
+            <h5>04 — FILTER BY STYLE</h5>
+            <div class="cards">
+                <div class="card">Minimal & Clean</div>
+                <div class="card">Dark & Cinematic</div>
+                <div class="card">Modern & Corporate</div>
+                <div class="card">Creative & Experimental</div>
+                <div class="card">Luxury & Editorial</div>
+                <div class="card">3D & Immersive</div>
+                <div class="card">Bold & Expressive</div>
+                <div class="card">Classic & Elegant</div>
+            </div>
+        </div>
+        <div class="technology">
+            <h5>05 — TECHNOLOGY</h5>
+            <div class="cards">
+                <div class="card">HTML</div>
+                <div class="card">CSS</div>
+                <div class="card">JavaScript</div>
+                <div class="card">React</div>
+                <div class="card">Three.js</div>
+                <div class="card">GSAP</div>
+                <div class="card">Node.js</div>
+                <div class="card">API Integration</div>
+                <div class="card">Responsive Design</div>
+            </div>
+        </div>
+        <div class="sort-projects">
+            <h5>06 — SORT PROJECTS</h5>
+            <div class="cards">
+                <div class="card">Newest First</div>
+                <div class="card">Oldest First</div>
+                <div class="card">Featured First</div>
+                <div class="card">A - Z</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURED SECTION -->
+
+    <div class="featured">
+        <div class="top">
+            <span>03 / FEATURED WORK</span>
+        </div>
+        <div class="box"></div>
+        <div class="detail">
+            <div class="left">
+                <h3>Project Title</h3>
+            </div>
+            <div class="right">
+                <h5>E-commerce Website</h5>
+            </div>
+        </div>
+        <div class="second-detail">
+            <h4>More than just a website.</h4>
+            <p>
+                A digital experience designed to bring a brand's identity, products and customer journey together.
+            </p>
+            <div class="cards">
+                <div class="card">HTML</div>
+                <div class="card">CSS</div>
+                <div class="card">JavaScript</div>
+                <div class="card">Responsive Design</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT ARCHIVE SECTION -->
+
+    <div class="project-archive" id="project-archive">
+        <div class="top">
+            <span>
+                04 / PROJECT ARCHIVE
+            </span>
+        </div>
+
+        <div class="second-top">
+            <h2>A collection of ideas,</h2>
+            <h3>brought to life</h3>
+            <p>
+                A selection of digital experiences, experiments and creative solutions.
+            </p>
+        </div>
+        <div class="cards">
+            <h5>PROJECT COLLECTION</h5>
+
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box"></div>
+                <div class="detail">
+                    <div class="left">
+                        <h3>Project Title</h3>
+                        <span>Filter by Industry . Browse Projects</span>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CREATIVE APPROCH SECTION -->
+
+    <div class="creative-approch">
+        <div class="top">
+            <span>06 / MY CREATIVE APPROACH</span>
+        </div>
+        <div class="cards">
+            <div class="left-card">
+                <span>THE WAY I THINK</span>
+                <h2>Good work starts with good thinking</h2>
+                <p>
+                    I believe every digital experience should have a clear purpose, thoughtful design and meaningful
+                    details.
+                </p>
+            </div>
+            <div class="right-card">
+                <div class="card">
+                    <span>01 / FOUNDATION</span>
+                    <h3>
+                        Understand the idea
+                    </h3>
+                    <p>
+                        Understand the purpose, audience and vision behind every project.
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="card">
+                    <span>
+                        02 / VISUAL THINKING
+                    </span>
+                    <h3>
+                        Design with intention
+                    </h3>
+                    <p>Create thoughtful layouts, typography and balanced visual details.</p>
+                </div>
+                <div class="line"></div>
+                <div class="card">
+                    <span>03 / DEVELOPMENT</span>
+                    <h3>Build with purpose</h3>
+                    <p>
+                        Turn creative concepts into functional and interactive experiences.
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="card">
+                    <span>04 / FINAL TOUCH</span>
+                    <h3>Refine every detail</h3>
+                    <p>
+                        Test, improve and polish the final experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="contact">
+        <div class="text">
+            <span>06 / LET'S CONNECT</span>
+            <h2>Have an idea?</h2>
+            <h3>Let's build something great together.</h3>
+            <p>
+                Have a project in mind or just want to say hello? I'd love to hear from you. Let's discuss how we can
+                bring your ideas to life.
+            </p>
+            <a href="contact.html">
+                <button>
+                    Let's Work Together ↗
+                </button>
+            </a>
+        </div>
+        <div class="links">
+            <span>shayanshakeel346@gmail.com</span>
+            <div class="social-links">
+                <a href="https://www.instagram.com/shayanshakeeldeveloper/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/shayanshakeeldeveloper/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61576979789533" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

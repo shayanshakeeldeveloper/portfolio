@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayan Shakeel - About Me</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="shortcut icon" href="../assets/logo.jpg" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :root {
+        --green: #a5ec48;
+        --black: #111111;
+        --white: #f0f0f0;
+    }
+
+    /* HEADER KI STYLING */
+
+    .header {
+        width: 100%;
+        height: 160vh;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    /* NAVBAR KI STYLING */
+
+    .navbar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        justify-content: space-between;
+
+    }
+
+    .navbar>.logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .navbar>.logo>img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .navbar>.nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar>.nav-links>a {
+        background-color: var(--white);
+        border-radius: 20px;
+        width: 90px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        color: var(--black);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .navbar>.nav-links>a:hover {
+        background-color: var(--green);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .navbar>.nav-links>.active {
+        background-color: var(--green);
+    }
+
+    .navbar>a>button {
+        color: var(--black);
+        width: 110px;
+        height: 36px;
+        border: 1px solid var(--black);
+        border-radius: 20px;
+        background-color: var(--white);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .navbar>a>button:hover {
+        background-color: var(--black);
+        color: var(--white);
+        transition: all 0.9s ease-in-out;
+    }
+
+    /* HERO SECTION KI STYLING */
+
+    .hero {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 30px;
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+
+    .hero .top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .hero .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .hero .second-top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .hero .second-top h1 {
+        font-size: 80px;
+    }
+
+    .hero .second-top h2 {
+        font-size: 70px;
+        color: var(--green);
+    }
+
+    .hero .main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero .main .left {
+        width: auto;
+        height: 80vh;
+    }
+
+    .hero .main .left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero .main .right {
+        width: 50vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .hero .main .right .hello {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .hero .main .right h2 {
+        font-size: 66px;
+    }
+
+    .hero .main .right .skills {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .hero .main .right .line {
+        width: 100%;
+        height: 20px;
+        background-color: var(--white);
+    }
+
+    .hero .main .right .scroll {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--green);
+    }
+
+    .hero .bottom {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .hero .bottom .card h3 {
+        font-size: 40px;
+        color: var(--green);
+    }
+
+    .hero .bottom .card h4 {
+        font-size: 50px;
+    }
+
+    .journey {
+        width: 100%;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 80px;
+    }
+
+    .journey .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .journey .second-top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .journey .second-top h2 {
+        font-size: 60px;
+    }
+
+    .journey .main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .journey .main .cards {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        margin-top: 90px;
+    }
+
+    .journey .main .cards .card {
+        width: auto;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 6px;
+    }
+
+    .journey .main .cards .card span {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .journey .main .cards .card h3 {
+        font-size: 50px;
+    }
+
+    .journey .main .dot-line {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .journey .main .dot-line .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: var(--green);
+    }
+
+    .journey .main .dot-line .line {
+        width: 1px;
+        height: 110px;
+        background-color: var(--black);
+    }
+
+    .journey .statement {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .journey .statement span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .journey .statement h2 {
+        font-size: 60px;
+    }
+
+    /* PHILOSOPHY SECTION KI STYLING */
+
+    .philosophy {
+        width: 100%;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 80px;
+        gap: 40px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .philosophy .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .philosophy .second-top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .philosophy .second-top h2 {
+        font-size: 60px;
+    }
+
+    .philosophy .third-top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .philosophy .third-top span {
+        font-size: 18px;
+        font-weight: 600;
+        font-style: italic
+    }
+
+    .philosophy .third-top h3 {
+        font-size: 50px;
+    }
+
+    .philosophy .cards {
+        margin: auto;
+        width: 1200px;
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 600px);
+        grid-template-rows: repeat(2, 300px);
+        gap: 20px;
+    }
+
+    .philosophy .cards .card {
+        border: 1px solid var(--white);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 50px;
+        gap: 10px;
+    }
+
+    .philosophy .cards .card span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .philosophy .cards .card h3 {
+        font-size: 48px;
+    }
+
+    /* EXPERTISE SECTION KI STYLING */
+
+    .expertise {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 80px;
+        gap: 50px;
+    }
+
+    .expertise .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .expertise .second-top {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .expertise .second-top h2 {
+        font-size: 60px;
+    }
+
+    .expertise .cards {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .expertise .cards .line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--black);
+    }
+
+    .expertise .cards .card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .expertise .cards .card .number-and-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .expertise .cards .card .number-and-icon span,
+    i {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .expertise .cards .card h3 {
+        font-size: 50px;
+    }
+
+    .expertise .cards .card .skills {
+        display: flex;
+        gap: 10px;
+    }
+
+    .expertise .cards .card .skills .skill {
+        padding: 8px;
+        border: 1px solid var(--black);
+        color: var(--black);
+        border-radius: 12px;
+
+    }
+
+    /* EXPLORING SECTION KI STYLING */
+
+    .exploring {
+        width: 100%;
+        height: auto;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 50px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .exploring .top span {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--green);
+    }
+
+    .exploring .second-top h2 {
+        font-size: 60px;
+    }
+
+    .exploring .second-top h5 {
+        font-size: 38px;
+    }
+
+    .exploring .cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .exploring .cards .card1 {
+        grid-column: span 2;
+        grid-row: span 3;
+        background-color: rgba(0, 0, 0, 0.174);
+        border: 1px solid var(--white);
+        border-radius: 40px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .exploring .cards .card1 .focus {
+        display: flex;
+        gap: 30px;
+        border: 1px solid var(--green);
+        color: var(--green);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .exploring .cards .card1 .focus .circle {
+        width: 18px;
+        height: 18px;
+        background-color: var(--green);
+        border-radius: 50%;
+        align-items: center;
+    }
+
+    .exploring .cards .card1 .focus span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .exploring .cards .card1 span {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .exploring .cards .card1 h3 {
+        font-size: 50px;
+    }
+
+    .exploring .cards .card1 p {
+        font-size: 20px;
+    }
+
+    .exploring .cards .card1 .span {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .exploring .cards .card1 .span .line {
+        width: 5px;
+        height: 18px;
+        background-color: var(--green);
+    }
+
+    .exploring .cards .card1 .span .span {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .exploring .cards .card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        align-items: baseline;
+        background-color: rgba(0, 0, 0, 0.174);
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid var(--white);
+    }
+
+    .exploring .cards .card span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .exploring .cards .card h3 {
+        font-size: 30px;
+    }
+
+    .exploring .cards .card p {
+        font-size: 16px;
+    }
+
+    .exploring .cards .card .span span {
+        font-size: 18px;
+        color: var(--green);
+        letter-spacing: 1px;
+    }
+
+    /* CONTACT SECTION KI STYLING */
+
+    .contact {
+        width: 92%;
+        height: 60vh;
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+        border-radius: 60px;
+        padding: 80px;
+        background-color: var(--green);
+        color: var(--white);
+    }
+
+    .contact .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact .text span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .contact .text h2 {
+        font-size: 56px;
+    }
+
+    .contact .text h3 {
+        font-size: 48px;
+        color: var(--black);
+    }
+
+    .contact .text a button {
+        width: 180px;
+        height: 46px;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--black);
+        color: var(--green);
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid var(--black);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .contact .text a button:hover {
+        background-color: transparent;
+        color: var(--black);
+        transition: all 0.9s ease-in-out;
+    }
+
+    .contact .links {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contact .links span {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--black);
+    }
+
+    .contact .links .social-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact .links .social-links a {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .contact .links .social-links a i {
+        font-size: 20px;
+        font-weight: 800;
+    }
+</style>
+
+<body>
+    <!-- HEADER SECTION -->
+    <div class="header">
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="logo"><img src="../assets/logo.jpg" alt=""></div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="portfolio.html">Portfolio</a>
+            </div>
+            <a href="contact.html">
+                <button>
+                    <i class="fa-regular fa-comment-dots"></i>
+                    Let's Talk
+                </button>
+            </a>
+        </div>
+
+        <!-- HERO SECTION -->
+
+        <div class="hero">
+            <div class="top">
+                <span>01 / ABOUT</span>
+            </div>
+            <div class="second-top">
+                <h1>Not jsut writing code</h1>
+                <h2>I build digital experiences</h2>
+            </div>
+            <div class="main">
+                <div class="left">
+                    <img src="../assets/about.png" alt="">
+                </div>
+                <div class="right">
+                    <span class="hello">
+                        HELLO, I'M
+                    </span>
+                    <h2>Shayan Shakeel</h2>
+                    <span class="skills">
+                        Web Developer & Creative Thinker
+                    </span>
+                    <p>
+                        I enjoy turning ideas into meaningful digital experiences through clean code, thoughtful design
+                        and interactive details.
+                    </p>
+                    <div class="line"></div>
+                    <span class="scroll">
+                        SCROLL TO EXPLORE ↓
+                    </span>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="card">
+                    <h3>Based In</h3>
+                    <h4>Pakistan</h4>
+                </div>
+                <div class="card">
+                    <h3>Focus</h3>
+                    <h4>Web Development</h4>
+                </div>
+                <div class="card">
+                    <h3>Mindset</h3>
+                    <h4>Always Learning</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOURNEY SECTION -->
+
+    <div class="journey">
+        <div class="top">
+            <span>
+                02 / THE JOURNEY
+            </span>
+        </div>
+        <div class="second-top">
+            <h2>Every journey starts somewhere</h2>
+            <p>A look at how curiosity turned into a passion for building on the web.</p>
+        </div>
+        <div class="main">
+            <div class="dot-line">
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <span>01 / THE BEGINNING</span>
+                    <h3>Curiosity</h3>
+                    <p>
+                        Discovering how websites work and becoming interested in the digital world.
+                    </p>
+                </div>
+                <div class="card">
+                    <span>02 / THE FOUNDATION</span>
+                    <h3>Learning</h3>
+                    <p>
+                        Building a foundation in HTML, CSS and JavaScript.
+                    </p>
+                </div>
+                <div class="card">
+                    <span>03 / THE BUILDING</span>
+                    <h3>Creating</h3>
+                    <p>
+                        Turning ideas into real website projects and improving through practice.
+                    </p>
+                </div>
+                <div class="card">
+                    <span>04 / THE FUTURE</span>
+                    <h3>Growing</h3>
+                    <p>
+                        Exploring advanced JavaScript, interactive experiences and 3D web development.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="statement">
+            <span>
+                A THOUGHT I BELIEVE IN
+            </span>
+            <h2>
+                "The best way to grow is to keep building."
+            </h2>
+            <p>
+                Every project is an opportunity to learn something new, solve a problem and become better than
+                yesterday.
+            </p>
+        </div>
+    </div>
+
+    <!-- PHILOSOPHY SECTION -->
+
+    <div class="philosophy">
+        <div class="top">
+            <span>03 / MY PHILOSOPHY</span>
+        </div>
+        <div class="second-top">
+            <h2>Good design is more than just appearance.</h2>
+            <p>The principles and ideas that shape the way I approach every project.</p>
+        </div>
+        <div class="third-top">
+            <span>
+                MY APPROACH
+            </span>
+            <h3>I believe every detail has a purpose.</h3>
+            <p>
+                From the first layout to the smallest interaction, every decision should contribute to a better
+                experience.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <span>01 / PRINCIPLE</span>
+                <h3>Simplicity</h3>
+                <p>
+                    Keep things clear, purposeful and easy to understand.
+                </p>
+            </div>
+            <div class="card">
+                <span>02 / PRINCIPLE</span>
+                <h3>Purpose</h3>
+                <p>Every element should have a reason to exist.</p>
+            </div>
+            <div class="card">
+                <span>03 / PRINCIPLE</span>
+                <h3>Performance</h3>
+                <p>
+                    Build experiences that feel smooth and responsive.
+                </p>
+            </div>
+            <div class="card">
+                <span>04 / PRINCIPLE</span>
+                <h3>Creativity</h3>
+                <p>Explore ideas and find thoughtful ways to bring them to life.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERTISE SECTION -->
+
+    <div class="expertise">
+        <div class="top">
+            <span>04 / MY EXPERTISE</span>
+        </div>
+        <div class="second-top">
+            <h2>
+                Turning ideas into digital experiences
+            </h2>
+            <p>
+                A combination of development, design thinking and a passion for creating things that work beautifully.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>01</span>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>
+                    Website Development
+                </h3>
+                <p>Building modern, responsive and visually appealing websites tailored to your brand, business
+                    goals and audience.</p>
+                <div class="skills">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Responsive Design</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>02</span>
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h3>
+                    Frontend Development
+                </h3>
+                <p>
+                    Transforming creative designs into interactive and functional interfaces with clean code and
+                    seamless user experiences.
+                </p>
+                <div class="skills">
+                    <div class="skill">HTML & CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">UI Implementation</div>
+                    <div class="skill">Responsive Layouts</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>03</span>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <h3>
+                    Website Redesign
+                </h3>
+                <p>
+                    Transforming outdated websites into modern digital experiences with improved layouts, responsive
+                    designs and better usability.
+                </p>
+                <div class="skills">
+                    <div class="skill">Layout Improvement</div>
+                    <div class="skill">Visual Refinement</div>
+                    <div class="skill">Responsive Design</div>
+                    <div class="skill">UI Enhancement</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="card">
+                <div class="number-and-icon">
+                    <span>04</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3>
+                    Interactive Web Experiences
+                </h3>
+                <p>
+                    Creating engaging websites with smooth animations, creative interactions and immersive visual
+                    elements that leave a lasting impression.
+                </p>
+                <div class="skills">
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">CSS Animations</div>
+                    <div class="skill">Micro-interactions</div>
+                    <div class="skill">Scroll Effects</div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <!-- EXPLORING SECTION -->
+
+    <div class="exploring">
+        <div class="top">
+            <span>
+                05 / CURRENTLY EXPLORING
+            </span>
+        </div>
+        <div class="second-top">
+            <h2>
+                Always Learning
+            </h2>
+            <h5>
+                There's always something new to explore
+            </h5>
+            <p>
+                I'm consistently learning, experimenting and expanding my understanding of the web <br> to create better
+                digital experiences.
+            </p>
+        </div>
+        <div class="cards">
+            <div class="card1">
+                <div class="focus">
+                    <div class="circle"></div>
+                    <span>CURRENT FOCUS</span>
+                </div>
+                <span>01 /</span>
+                <h3>Advanced JavaScript</h3>
+                <p>
+                    Going deeper into JavaScript concepts <br> and building more dynamic web applications.
+                </p>
+                <div class="span">
+                    <div class="line"></div>
+                    <span class="span">
+                        DOM . APIs . Async JS
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <span>02 /</span>
+                <h3>
+                    3D Web Experiences
+                </h3>
+                <p>
+                    Exploring the third dimension for web.
+                </p>
+                <div class="span">
+                    <span>
+                        Three.js . 3D Scenes
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <span>03 /</span>
+                <h3>
+                    Creative Animations
+                </h3>
+                <p>
+                    Making interactions feel alive.
+                </p>
+                <div class="span">
+                    <span>
+                        GSAP . Scroll Effects
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <span>04 /</span>
+                <h3>
+                    Backend Development
+                </h3>
+                <p>
+                    Understanding what happens behind the scenes.
+                </p>
+                <div class="span">
+                    <span>
+                        Databases . APIs
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="contact">
+        <div class="text">
+            <span>06 / LET'S CONNECT</span>
+            <h2>Have an idea?</h2>
+            <h3>Let's build something great together.</h3>
+            <p>
+                Have a project in mind or just want to say hello? I'd love to hear from you. Let's discuss how we can
+                bring your ideas to life.
+            </p>
+            <a href="contact.html">
+                <button>
+                    Let's Work Together ↗
+                </button>
+            </a>
+        </div>
+        <div class="links">
+            <span>shayanshakeel346@gmail.com</span>
+            <div class="social-links">
+                <a href="https://www.instagram.com/shayanshakeeldeveloper/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/shayanshakeeldeveloper/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61576979789533" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
